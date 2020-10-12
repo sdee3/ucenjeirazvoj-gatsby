@@ -4,7 +4,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 
 export default function RadioniceZaDecu() {
   return (
-    <Suspense fallback="Učitavanje...">
+    <>
       <Breadcrumbs
         page={
           <>
@@ -170,6 +170,6 @@ export default function RadioniceZaDecu() {
           </p>
         </div>
       </section>
-    </Suspense>
+    </>
   );
 }

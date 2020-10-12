@@ -4,7 +4,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 
 export default function PodrskaOdraslima() {
   return (
-    <Suspense fallback="Učitavanje...">
+    <>
       <Breadcrumbs
         page={
           <>
@@ -107,6 +107,6 @@ export default function PodrskaOdraslima() {
           </div>
         </div>
       </section>
-    </Suspense>
+    </>
   );
 }

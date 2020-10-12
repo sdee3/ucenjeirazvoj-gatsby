@@ -5,7 +5,7 @@ import BoravakCarousel from "./BoravakCarousel";
 
 export default function ProduzeniBoravak() {
   return (
-    <Suspense fallback="Učitavanje...">
+    <>
       <Breadcrumbs
         page={
           <>
@@ -79,6 +79,6 @@ export default function ProduzeniBoravak() {
           <BoravakCarousel className="support-page__carousel" />
         </div>
       </section>
-    </Suspense>
+    </>
   );
 }
