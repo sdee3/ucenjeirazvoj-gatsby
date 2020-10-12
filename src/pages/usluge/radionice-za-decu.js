@@ -1,7 +1,6 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import { Link } from "gatsby";
-
-const Breadcrumbs = lazy(() => import("../../components/Breadcrumbs"));
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 export default function RadioniceZaDecu() {
   return (

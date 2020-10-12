@@ -1,8 +1,7 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import { Link } from "gatsby";
-
-const Breadcrumbs = lazy(() => import("../../components/Breadcrumbs"));
-const BoravakCarousel = lazy(() => import("./BoravakCarousel"));
+import Breadcrumbs from "../../components/Breadcrumbs";
+import BoravakCarousel from "./BoravakCarousel";
 
 export default function ProduzeniBoravak() {
   return (

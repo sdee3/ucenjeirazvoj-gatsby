@@ -1,14 +1,13 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 import { useMediaQuery } from "react-responsive";
-
-const Services = lazy(() => import("../components/Services"));
+import Services from "../components/Services";
 
 export default function Home() {
   const isMobile = useMediaQuery({ query: "(max-width: 769px)" });
 
   return (
-    <Suspense fallback="Učitavanje...">
+    <>
       <Helmet>
         <title>Učenje i razvoj</title>
         <meta
@@ -173,6 +172,6 @@ export default function Home() {
         </div>
         {/* <Services /> */}
       </section>
-    </Suspense>
+    </>
   );
 }
