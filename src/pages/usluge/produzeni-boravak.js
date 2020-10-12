@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import Breadcrumbs from "../../components/Breadcrumbs";
-import BoravakCarousel from "./BoravakCarousel";
+import BoravakCarousel from "../../components/BoravakCarousel";
 
 export default function ProduzeniBoravak() {
   return (
