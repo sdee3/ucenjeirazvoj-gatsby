@@ -1,32 +1,37 @@
-// const path = require(`path`);
-// // Log out information after a build is done
-// exports.onPostBuild = ({ reporter }) => {
-//   reporter.info(`Your Gatsby site has been built!`);
-// };
-// // Create blog pages dynamically
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions;
-//   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
-//   const result = await graphql(`
-//     query {
-//       allSamplePages {
-//         edges {
-//           node {
-//             slug
-//             title
-//           }
-//         }
-//       }
-//     }
-//   `);
+const path = require(`path`);
+// Log out information after a build is done
+exports.onPostBuild = ({ reporter }) => {
+  reporter.info(`Your Gatsby site has been built!`);
+};
+// Create blog pages dynamically
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const subTopicTemplate = path.resolve(`src/templates/subTopic.js`);
 
-//   result.data.allSamplePages.edges.forEach(edge => {
-//     createPage({
-//       path: `${edge.node.slug}`,
-//       component: blogPostTemplate,
-//       context: {
-//         title: edge.node.title,
-//       },
-//     });
-//   });
-// };
+  const result = await graphql(`
+    query {
+      ucenjeirazvoj {
+        subtopics {
+          name
+          intro
+          content
+          slug
+          img_url
+          topic {
+            name
+          }
+        }
+      }
+    }
+  `);
+
+  result.data.ucenjeirazvoj.subtopics.forEach(subtopic => {
+    createPage({
+      path: `/tema/${subtopic.slug}`,
+      component: subTopicTemplate,
+      context: {
+        slug: subtopic.slug,
+      },
+    });
+  });
+};

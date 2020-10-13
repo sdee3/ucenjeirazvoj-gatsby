@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useMediaQuery } from "react-responsive";
-// import Services from "../components/Services";
+import Services from "../components/Services";
 
 export default function Home() {
   const isMobile = useMediaQuery({ query: "(max-width: 769px)" });
@@ -170,7 +170,7 @@ export default function Home() {
             u tom procesu.
           </p>
         </div>
-        {/* <Services /> */}
+        <Services />
       </section>
     </>
   );

@@ -1,6 +1,16 @@
 module.exports = {
   plugins: [
     {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "UcenjeIRazvoj",
+        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        fieldName: "ucenjeirazvoj",
+        // Url to query from
+        url: "http://localhost:8001/graphql",
+      },
+    },
+    {
       resolve: `gatsby-plugin-gtag`,
       options: {
         trackingId: `UA-167145610-1`,
@@ -18,6 +28,10 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
   ],
+  proxy: {
+    prefix: "/api",
+    url: "http://localhost:8001",
+  },
   siteMetadata: {
     siteUrl: `https://ucenjeirazvoj.com`,
   },
