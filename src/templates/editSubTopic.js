@@ -211,6 +211,7 @@ export const query = graphql`
         slug
         img_url
         topic {
+          id
           name
         }
       }
