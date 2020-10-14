@@ -6,7 +6,7 @@ const createCookie = (cookieName, cookieValue, daysToExpire) => {
   const date = new Date();
   date.setTime(date.getTime() + daysToExpire * 24 * 60 * 60 * 999);
   if (isDocumentDefined()) {
-    document.cookie = `${cookieName}=${cookieValue}; expires=${date.toGMTString()}`;
+    document.cookie += `${cookieName}=${cookieValue}; expires=${date.toGMTString()}`;
   }
 };
 

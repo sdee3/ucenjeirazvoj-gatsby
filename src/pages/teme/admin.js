@@ -1,4 +1,5 @@
 import React from 'react';
+import { navigate } from 'gatsby';
 import axios from 'axios';
 import { createCookie, fetchCookie } from '../../Helpers';
 
@@ -11,7 +12,7 @@ export default function AdminLogin() {
 
     if (fetchCookie('x-auth').length) {
       alert('Već ste ulogovani! Redirekcija nazad...');
-      window.location.href = currentUrl.replace('/admin', '');
+      navigate(currentUrl.replace('/admin', ''), { replace: true });
     }
   }, []);
 

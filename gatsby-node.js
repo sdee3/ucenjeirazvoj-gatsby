@@ -7,6 +7,7 @@ exports.onPostBuild = ({ reporter }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const subTopicTemplate = path.resolve(`src/templates/subTopic.js`);
+  const subTopicEditTemplate = path.resolve(`src/templates/editSubTopic.js`);
 
   const result = await graphql(`
     query {
@@ -29,6 +30,14 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `/tema/${subtopic.slug}`,
       component: subTopicTemplate,
+      context: {
+        slug: subtopic.slug,
+      },
+    });
+
+    createPage({
+      path: `/tema/${subtopic.slug}/edit`,
+      component: subTopicEditTemplate,
       context: {
         slug: subtopic.slug,
       },
