@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "gatsby";
-import Breadcrumbs from "../../components/Breadcrumbs";
+import React from 'react';
+import { Link } from 'gatsby';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 export default function PodrskaOdraslima() {
   return (
@@ -10,7 +10,7 @@ export default function PodrskaOdraslima() {
           <>
             <Link to="/usluge">Usluge</Link>
             <i className="material-icons">keyboard_arrow_right</i>
-            <Link to={`/usluge/podrska-licnom-rastu-razvoju`}>
+            <Link to="/usluge/podrska-licnom-rastu-razvoju">
               Podrška ličnom rastu i razvoju
             </Link>
           </>

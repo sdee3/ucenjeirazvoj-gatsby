@@ -25,7 +25,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  result.data.ucenjeirazvoj.subtopics.forEach(subtopic => {
+  result.data.ucenjeirazvoj.subtopics.forEach((subtopic) => {
     createPage({
       path: `/tema/${subtopic.slug}`,
       component: subTopicTemplate,

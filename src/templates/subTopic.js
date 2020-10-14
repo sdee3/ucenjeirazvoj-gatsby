@@ -1,16 +1,17 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import axios from "axios";
-import { graphql, Link } from "gatsby";
-import { isAuthenticated, validateCookie } from "../Helpers";
-import Breadcrumbs from "../components/Breadcrumbs";
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import axios from 'axios';
+import { graphql, Link } from 'gatsby';
+import { isAuthenticated, validateCookie } from '../Helpers';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 export default function SubTopic(props) {
   const [article, setArticle] = React.useState({});
-  const [parentTopic, setParentTopic] = React.useState("");
+  const [parentTopic, setParentTopic] = React.useState('');
 
   React.useEffect(() => {
     const { subtopic } = props.data.ucenjeirazvoj;
+    console.log(isAuthenticated());
 
     setArticle(subtopic);
     setParentTopic(subtopic.topic.name);
@@ -28,22 +29,22 @@ export default function SubTopic(props) {
   //   }
   // }, []);
 
-  /* const deleteArticle = () => {
-    if (window?.confirm("Are you sure you want to delete this text?")) {
+  const deleteArticle = () => {
+    if (window?.confirm('Are you sure you want to delete this text?')) {
       validateCookie()
         .then(() =>
           axios
             .delete(`/api/tema/${article.slug}`)
-            .then(() => (window.location.href = "/teme"))
+            .then(() => (window.location.href = '/teme'))
         )
         .catch(() => {
           alert(
-            "Error validating the cookie. Click OK to be redirected to the login page"
+            'Error validating the cookie. Click OK to be redirected to the login page'
           );
-          window.location.href = "/teme/admin";
+          window.location.href = '/teme/admin';
         });
     }
-  }; */
+  };
 
   return article ? (
     <>
@@ -93,16 +94,18 @@ export default function SubTopic(props) {
       />
       <section className="blog-page container">
         <section className="blog-post">
-          {/* {isAuthenticated() ? (
+          {isAuthenticated() ? (
             <div className="blog-post__top-buttons">
               <Link to={`/tema/${article.slug}/edit`}>
-                <button className="button">Izmeni tekst</button>
+                <button className="button" type="button">
+                  Izmeni tekst
+                </button>
               </Link>
-              <button className="button" onClick={deleteArticle}>
+              <button className="button" onClick={deleteArticle} type="button">
                 Obriši tekst
               </button>
             </div>
-          ) : null}*/}
+          ) : null}
           <h1 className="blog-post__title">{article.name}</h1>
           <section className="blog-post__author-category">
             <span className="label">{parentTopic}</span>
@@ -125,3 +128,20 @@ export default function SubTopic(props) {
     </>
   ) : null;
 }
+
+export const query = graphql`
+  query($slug: String!) {
+    ucenjeirazvoj {
+      subtopic(slug: $slug) {
+        name
+        intro
+        content
+        slug
+        img_url
+        topic {
+          name
+        }
+      }
+    }
+  }
+`;

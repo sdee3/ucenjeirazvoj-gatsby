@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "gatsby";
-import Breadcrumbs from "../../components/Breadcrumbs";
+import React from 'react';
+import { Link } from 'gatsby';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 export default function RadioniceZaDecu() {
   return (
@@ -10,7 +10,7 @@ export default function RadioniceZaDecu() {
           <>
             <Link to="/usluge">Usluge</Link>
             <i className="material-icons">keyboard_arrow_right</i>
-            <Link to={`/usluge/radionice-za-decu`}>Radionice za decu</Link>
+            <Link to="/usluge/radionice-za-decu">Radionice za decu</Link>
           </>
         }
       />
@@ -146,7 +146,7 @@ export default function RadioniceZaDecu() {
           <p>
             <strong>
               <em>&quot;Kreativna subota&quot;</em>
-            </strong>{" "}
+            </strong>{' '}
             u okviru &quot;Centar za učenje i razvoj&quot; osmišljena je
             radionica da roditeljima omogući dodatno vreme za njih, prijatelje,
             obaveze, a deci dodatno druženje i rad na razvoju kognitivnih,

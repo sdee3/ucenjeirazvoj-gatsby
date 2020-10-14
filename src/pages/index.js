@@ -1,10 +1,10 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import { useMediaQuery } from "react-responsive";
-import Services from "../components/Services";
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { useMediaQuery } from 'react-responsive';
+import Services from '../components/Services';
 
 export default function Home() {
-  const isMobile = useMediaQuery({ query: "(max-width: 769px)" });
+  const isMobile = useMediaQuery({ query: '(max-width: 769px)' });
 
   return (
     <>
@@ -43,8 +43,8 @@ export default function Home() {
             alt="Učenje i razvoj cover"
             src={
               isMobile
-                ? "https://res.cloudinary.com/sdee3-com/image/upload/v1600187912/ucenjeirazvoj/homepage-mobile.jpg"
-                : "https://res.cloudinary.com/sdee3-com/image/upload/v1600187912/ucenjeirazvoj/homepage.jpg"
+                ? 'https://res.cloudinary.com/sdee3-com/image/upload/v1600187912/ucenjeirazvoj/homepage-mobile.jpg'
+                : 'https://res.cloudinary.com/sdee3-com/image/upload/v1600187912/ucenjeirazvoj/homepage.jpg'
             }
           />
         </section>
@@ -88,7 +88,7 @@ export default function Home() {
             mogućnost dogovora.
           </p>
           <p>
-            Takođe, organizujemo program za decu tokom{" "}
+            Takođe, organizujemo program za decu tokom{' '}
             <strong>letnjeg i zimskog raspusta</strong> sa edukativnim
             sadržajima.
           </p>
@@ -141,7 +141,7 @@ export default function Home() {
           <p>
             Uz pomoć savetovanja i psihoterapije možemo se osloboditi
             emocionalnih problema, disfunkcionalnih ponašanja i iracionalnog
-            načina razmišljanja. Svrha savetodavno-terapijskog rada sa{" "}
+            načina razmišljanja. Svrha savetodavno-terapijskog rada sa{' '}
             <strong>odraslima</strong> je da naučimo kako da živimo kvalitetnije
             i budemo uspešniji u obavljanju svojih uloga. Rezultat pravovremeno
             sprovedenih psihoterapijskih intervencija je da postanemo

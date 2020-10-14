@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 export default function About() {
   return (
-    <section className='about-page'>
-      <div className='container about-page__text'>
+    <section className="about-page">
+      <div className="container about-page__text">
         <h1>O nama</h1>
         <h2>Ko smo mi?</h2>
         <p>
@@ -84,8 +84,8 @@ export default function About() {
         </p>
         <br />
         <img
-          alt='Učenje i razvoj - O nama'
-          src='https://res.cloudinary.com/sdee3-com/image/upload/c_scale,w_500/v1600186008/ucenjeirazvoj/vece/o-nama.jpg'
+          alt="Učenje i razvoj - O nama"
+          src="https://res.cloudinary.com/sdee3-com/image/upload/c_scale,w_500/v1600186008/ucenjeirazvoj/vece/o-nama.jpg"
         />
         <br />
       </div>

@@ -1,10 +1,10 @@
-import React from "react";
-import { useMediaQuery } from "react-responsive";
-import onClickOutside from "react-onclickoutside";
-import { Link } from "gatsby";
+import React from 'react';
+import { useMediaQuery } from 'react-responsive';
+import onClickOutside from 'react-onclickoutside';
+import { Link } from 'gatsby';
 
 function Navbar() {
-  const isMobile = useMediaQuery({ query: "(max-width: 769px)" });
+  const isMobile = useMediaQuery({ query: '(max-width: 769px)' });
   const [isHamChecked, setIsHamChecked] = React.useState(false);
 
   Navbar.handleClickOutside = () => setIsHamChecked(false);

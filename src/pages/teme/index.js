@@ -1,8 +1,8 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import axios from "axios";
-import { Link } from "gatsby";
-import { isAuthenticated } from "../../Helpers";
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import axios from 'axios';
+import { Link } from 'gatsby';
+import { isAuthenticated } from '../../Helpers';
 
 export default function Teme() {
   const [fetchedTopics, setFetchedTopics] = React.useState([]);
@@ -13,37 +13,36 @@ export default function Teme() {
 
   const [allSubtopicsToggled, setAllSubtopicsToggled] = React.useState(false);
 
-  const fetchSubTopicsByParentId = id => {
-    return fetchedSubTopics.filter(subtopic => subtopic.topic_id === id);
-  };
+  const fetchSubTopicsByParentId = (id) =>
+    fetchedSubTopics.filter((subtopic) => subtopic.topic_id === id);
 
-  const fetchLatestSubTopicsByTopic = id => {
-    let result = [];
+  const fetchLatestSubTopicsByTopic = (id) => {
+    const result = [];
 
-    for (let i = 0; i < latestFetchedSubTopics.length; i++) {
-      latestFetchedSubTopics[i].forEach(subtopic => {
+    latestFetchedSubTopics.forEach((element, index) => {
+      latestFetchedSubTopics[index].forEach((subtopic) => {
         if (subtopic.topic_id === id) result.push(subtopic);
       });
-    }
+    });
 
     return result;
   };
 
   React.useEffect(() => {
     axios
-      .get("/api/topics")
-      .then(res => setFetchedTopics(res.data))
-      .catch(err => console.error(err.response));
+      .get('/api/topics')
+      .then((res) => setFetchedTopics(res.data))
+      .catch((err) => console.error(err.response));
 
     axios
-      .get("/api/subtopics")
-      .then(res => setFetchedSubTopics(res.data))
-      .catch(err => console.error(err.response));
+      .get('/api/subtopics')
+      .then((res) => setFetchedSubTopics(res.data))
+      .catch((err) => console.error(err.response));
 
     axios
-      .get("/api/subtopics/latest")
-      .then(res => setLatestFetchedSubTopics(res.data))
-      .catch(err => console.error(err.response));
+      .get('/api/subtopics/latest')
+      .then((res) => setLatestFetchedSubTopics(res.data))
+      .catch((err) => console.error(err.response));
   }, []);
 
   return (
@@ -80,86 +79,37 @@ export default function Teme() {
       <section className="topics-page container">
         <div className="blog-page__top-heading">
           <h1>Teme</h1>
-          {/* {isAuthenticated() ? (
+          {isAuthenticated() ? (
             <Link to="/teme/new">
-              <button className="button">Novi tekst</button>
+              <button className="button" type="button">
+                Novi tekst
+              </button>
             </Link>
-          ) : null} */}
+          ) : null}
         </div>
         <div className="topics-page__topics">
           {!allSubtopicsToggled
             ? fetchedTopics.length
-              ? fetchedTopics.map(topic => {
-                  return (
-                    <section
-                      className="topics-page__topics--topic"
-                      key={topic.id}
-                    >
-                      <h2>{topic.name}</h2>
-                      <div className="topics-page__topics--subtopics">
-                        {fetchLatestSubTopicsByTopic(topic.id).map(subtopic => {
-                          return (
-                            <Link
-                              key={subtopic.id}
-                              to={`/tema/${subtopic.slug}`}
-                            >
-                              <div className="topics-page__topics--subtopic">
-                                {subtopic.img_url ? (
-                                  <img
-                                    src={subtopic.img_url}
-                                    alt={`${subtopic.name} | Učenje i razvoj`}
-                                  />
-                                ) : null}
-                                <p>{subtopic.name}</p>
-                              </div>
-                            </Link>
-                          );
-                        })}
-                      </div>
-                      <div
-                        aria-hidden="true"
-                        className="topics-page__topics--subtopics-toggle-all"
-                        onClick={() =>
-                          setAllSubtopicsToggled(!allSubtopicsToggled)
-                        }
-                        onKeyDown={() =>
-                          setAllSubtopicsToggled(!allSubtopicsToggled)
-                        }
-                      >
-                        {allSubtopicsToggled ? (
-                          <i className="fas fa-caret-up"></i>
-                        ) : (
-                          <i className="fas fa-caret-down"></i>
-                        )}
-                      </div>
-                    </section>
-                  );
-                })
-              : null
-            : fetchedTopics.length
-            ? fetchedTopics.map(topic => {
-                return (
+              ? fetchedTopics.map((topic) => (
                   <section
                     className="topics-page__topics--topic"
                     key={topic.id}
                   >
                     <h2>{topic.name}</h2>
                     <div className="topics-page__topics--subtopics">
-                      {fetchSubTopicsByParentId(topic.id).map(subtopic => {
-                        return (
-                          <Link key={subtopic.id} to={`/tema/${subtopic.slug}`}>
-                            <div className="topics-page__topics--subtopic">
-                              {subtopic.img_url ? (
-                                <img
-                                  src={subtopic.img_url}
-                                  alt={`${subtopic.name} | Učenje i razvoj`}
-                                />
-                              ) : null}
-                              <h3>{subtopic.name}</h3>
-                            </div>
-                          </Link>
-                        );
-                      })}
+                      {fetchLatestSubTopicsByTopic(topic.id).map((subtopic) => (
+                        <Link key={subtopic.id} to={`/tema/${subtopic.slug}`}>
+                          <div className="topics-page__topics--subtopic">
+                            {subtopic.img_url ? (
+                              <img
+                                src={subtopic.img_url}
+                                alt={`${subtopic.name} | Učenje i razvoj`}
+                              />
+                            ) : null}
+                            <p>{subtopic.name}</p>
+                          </div>
+                        </Link>
+                      ))}
                     </div>
                     <div
                       aria-hidden="true"
@@ -172,14 +122,49 @@ export default function Teme() {
                       }
                     >
                       {allSubtopicsToggled ? (
-                        <i className="fas fa-caret-up"></i>
+                        <i className="fas fa-caret-up" />
                       ) : (
-                        <i className="fas fa-caret-down"></i>
+                        <i className="fas fa-caret-down" />
                       )}
                     </div>
                   </section>
-                );
-              })
+                ))
+              : null
+            : fetchedTopics.length
+            ? fetchedTopics.map((topic) => (
+                <section className="topics-page__topics--topic" key={topic.id}>
+                  <h2>{topic.name}</h2>
+                  <div className="topics-page__topics--subtopics">
+                    {fetchSubTopicsByParentId(topic.id).map((subtopic) => (
+                      <Link key={subtopic.id} to={`/tema/${subtopic.slug}`}>
+                        <div className="topics-page__topics--subtopic">
+                          {subtopic.img_url ? (
+                            <img
+                              src={subtopic.img_url}
+                              alt={`${subtopic.name} | Učenje i razvoj`}
+                            />
+                          ) : null}
+                          <h3>{subtopic.name}</h3>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    className="topics-page__topics--subtopics-toggle-all"
+                    onClick={() => setAllSubtopicsToggled(!allSubtopicsToggled)}
+                    onKeyDown={() =>
+                      setAllSubtopicsToggled(!allSubtopicsToggled)
+                    }
+                  >
+                    {allSubtopicsToggled ? (
+                      <i className="fas fa-caret-up" />
+                    ) : (
+                      <i className="fas fa-caret-down" />
+                    )}
+                  </div>
+                </section>
+              ))
             : null}
         </div>
       </section>

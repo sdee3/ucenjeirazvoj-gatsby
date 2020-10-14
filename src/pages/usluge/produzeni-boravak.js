@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "gatsby";
-import Breadcrumbs from "../../components/Breadcrumbs";
-import BoravakCarousel from "../../components/BoravakCarousel";
+import React from 'react';
+import { Link } from 'gatsby';
+import Breadcrumbs from '../../components/Breadcrumbs';
+import BoravakCarousel from '../../components/BoravakCarousel';
 
 export default function ProduzeniBoravak() {
   return (
@@ -11,7 +11,7 @@ export default function ProduzeniBoravak() {
           <>
             <Link to="/usluge">Usluge</Link>
             <i className="material-icons">keyboard_arrow_right</i>
-            <Link to={`/usluge/produzeni-boravak`}>Produženi boravak</Link>
+            <Link to="/usluge/produzeni-boravak">Produženi boravak</Link>
           </>
         }
       />

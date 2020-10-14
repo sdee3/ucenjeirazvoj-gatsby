@@ -1,85 +1,80 @@
-import axios from "axios";
+import axios from 'axios';
+
+const isDocumentDefined = () => typeof document !== 'undefined';
 
 const createCookie = (cookieName, cookieValue, daysToExpire) => {
   const date = new Date();
-  date.setTime(date.getTime() + daysToExpire * 24 * 60 * 60 * 1000);
-  document.cookie =
-    cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+  date.setTime(date.getTime() + daysToExpire * 24 * 60 * 60 * 999);
+  if (isDocumentDefined()) {
+    document.cookie = `${cookieName}=${cookieValue}; expires=${date.toGMTString()}`;
+  }
 };
 
-const fetchCookie = cookieName => {
-  let name = cookieName + "=";
-  let allCookieArray = document.cookie.split(";");
+const fetchCookie = (cookieName) => {
+  const name = `${cookieName}=`;
+  const allCookieArray = isDocumentDefined() ? document.cookie.split(';') : [];
 
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < allCookieArray.length; i++) {
-    let temp = allCookieArray[i].trim();
+    const temp = allCookieArray[i].trim();
 
     if (temp.indexOf(name) === 0) {
       return temp.substring(name.length, temp.length);
     }
   }
 
-  return "";
+  return '';
 };
 
-const isAuthenticated = () => {
-  return fetchCookie("x-auth").length > 0;
-};
+const isAuthenticated = () => fetchCookie('x-auth').length > 0;
 
-const validateCookie = () => {
-  return new Promise((resolve, reject) => {
+const validateCookie = () =>
+  new Promise((resolve, reject) => {
     axios
-      .post("/api/validate-cookie", { cookie: fetchCookie("x-auth") })
-      .then(res => resolve(res.data))
-      .catch(err => reject(err.response));
+      .post('/api/validate-cookie', { cookie: fetchCookie('x-auth') })
+      .then((res) => resolve(res.data))
+      .catch((err) => reject(err.response));
   });
-};
 
-const validateArticle = article => {
-  return new Promise((resolve, reject) => {
+const validateArticle = (article) =>
+  new Promise((resolve, reject) => {
     if (article.title.length) {
       if (article.caption.length) {
         if (article.slug.length) {
           if (article.content.length) {
             if (article.cover_url.length) {
               return resolve();
-            } else {
-              reject("Missing cover image URL in the form!");
             }
+            reject(new Error('Missing cover image URL in the form!'));
           } else {
-            reject("Missing content in the form!");
+            reject(new Error('Missing content in the form!'));
           }
         } else {
-          reject("Missing slug in the form!");
+          reject(new Error('Missing slug in the form!'));
         }
       } else {
-        reject("Missing caption in the form!");
+        reject(new Error('Missing caption in the form!'));
       }
     } else {
-      reject("Missing title in the form!");
+      reject(new Error('Missing title in the form!'));
     }
   });
-};
 
 const areInputsValid = (name, email, message) => {
   if (name.length) {
     if (email.length) {
-      let re = /\S+@\S+\.\S+/;
+      const re = /\S+@\S+\.\S+/;
       if (re.test(email)) {
         if (message.length) {
           return true;
-        } else {
-          return "Polje sa porukom je obavezno! Molimo pokušajte ponovo.";
         }
-      } else {
-        return "Email adresa nije ispravna! Molimo pokušajte ponovo.";
+        return 'Polje sa porukom je obavezno! Molimo pokušajte ponovo.';
       }
-    } else {
-      return "Email adresa je obavezna4! Molimo pokušajte ponovo.";
+      return 'Email adresa nije ispravna! Molimo pokušajte ponovo.';
     }
-  } else {
-    return "Polje sa imenom je obavezno! Molimo pokušajte ponovo.";
+    return 'Email adresa je obavezna4! Molimo pokušajte ponovo.';
   }
+  return 'Polje sa imenom je obavezno! Molimo pokušajte ponovo.';
 };
 
 export {
