@@ -56,7 +56,7 @@ class Edit extends React.Component {
       axios.post('/api/img', formData).then((res) => {
         const imgUrl =
           typeof window !== 'undefined'
-            ? window.location.origin + res.data
+            ? `http://localhost:8001${res.data}`
             : '';
         // Remove placeholder image
         this.quill.getEditor().deleteText(range.index, 1);
@@ -78,6 +78,8 @@ class Edit extends React.Component {
             'Tekst je uspešno ažuriran! Bićete vraćeni nazad za par sekundi...',
             'success'
           );
+
+          axios.post(`/__refresh`);
 
           setTimeout(() => {
             navigate(`/tema/${article.slug}`, { replace: true });

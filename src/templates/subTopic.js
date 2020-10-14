@@ -11,7 +11,6 @@ export default function SubTopic(props) {
 
   React.useEffect(() => {
     const { subtopic } = props.data.ucenjeirazvoj;
-    console.log(isAuthenticated());
 
     setArticle(subtopic);
     setParentTopic(subtopic.topic.name);

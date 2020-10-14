@@ -5,6 +5,9 @@ exports.onPostBuild = ({ reporter }) => {
 };
 // Create blog pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
+  // TODO MOVE TO AN .env FILE THAT WORKS!!!
+  process.env.ENABLE_GATSBY_REFRESH_ENDPOINT = true;
+
   const { createPage } = actions;
   const subTopicTemplate = path.resolve(`src/templates/subTopic.js`);
   const subTopicEditTemplate = path.resolve(`src/templates/editSubTopic.js`);
