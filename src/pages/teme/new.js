@@ -93,8 +93,7 @@ export default function AddTopic() {
           .then(() => {
             axios.post('/__refresh');
             setAlert(
-              'Novi tekst je uspešno kreiran! Bićete vraćeni nazad za par sekundi...',
-              'success'
+              'Novi tekst je uspešno kreiran! Bićete vraćeni nazad za par sekundi...'
             );
 
             setTimeout(() => {
