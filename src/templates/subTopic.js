@@ -1,3 +1,5 @@
+/* eslint-disable no-shadow */
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
@@ -45,49 +47,57 @@ export default function SubTopic(props) {
     }
   };
 
-  return article ? (
+  const { subtopic } = props.data.ucenjeirazvoj;
+
+  return subtopic ? (
     <>
       <Helmet>
-        <title>{`${article.name} | Učenje i razvoj`}</title>
+        <title>{`${subtopic.name} | Učenje i razvoj`}</title>
         <meta
           name="description"
           content={
-            article.intro ? article.intro : `${article.title} | Učenje i razvoj`
+            subtopic.intro
+              ? subtopic.intro
+              : `${subtopic.title} | Učenje i razvoj`
           }
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ucenjeirazvoj.com/" />
         <meta
           property="og:title"
-          content={`${article.name} | Učenje i razvoj`}
+          content={`${subtopic.name} | Učenje i razvoj`}
         />
         <meta
           property="og:description"
           content={
-            article.intro ? article.intro : `${article.title} | Učenje i razvoj`
+            subtopic.intro
+              ? subtopic.intro
+              : `${subtopic.title} | Učenje i razvoj`
           }
         />
-        <meta property="og:image" content={article.img_url} />
+        <meta property="og:image" content={subtopic.img_url} />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://ucenjeirazvoj.com/" />
         <meta
           property="twitter:title"
-          content={`${article.name} | Učenje i razvoj`}
+          content={`${subtopic.name} | Učenje i razvoj`}
         />
         <meta
           property="twitter:description"
           content={
-            article.intro ? article.intro : `${article.title} | Učenje i razvoj`
+            subtopic.intro
+              ? subtopic.intro
+              : `${subtopic.title} | Učenje i razvoj`
           }
         />
-        <meta property="twitter:image" content={article.img_url} />
+        <meta property="twitter:image" content={subtopic.img_url} />
       </Helmet>
       <Breadcrumbs
         page={
           <>
             <Link to="/teme">Teme</Link>
             <i className="material-icons">keyboard_arrow_right</i>
-            <Link to={`/tema/${article.slug}`}>{article.name}</Link>
+            <Link to={`/tema/${subtopic.slug}`}>{subtopic.name}</Link>
           </>
         }
       />
@@ -96,7 +106,7 @@ export default function SubTopic(props) {
           {isAuthenticated() ? (
             <div className="blog-post__top-buttons">
               <a
-                href={`${process.env.GATSBY_API_URL}/tema/${article.slug}/edit`}
+                href={`${process.env.GATSBY_API_URL}/tema/${subtopic.slug}/edit`}
               >
                 <button className="button" type="button">
                   Izmeni tekst
