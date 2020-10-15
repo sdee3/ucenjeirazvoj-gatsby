@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
-import { graphql, Link } from 'gatsby';
+import { graphql, Link, navigate } from 'gatsby';
 import { isAuthenticated, validateCookie } from '../Helpers';
 import Breadcrumbs from '../components/Breadcrumbs';
 
@@ -34,13 +34,13 @@ export default function SubTopic(props) {
         .then(() =>
           axios
             .delete(`/api/tema/${article.slug}`)
-            .then(() => (window.location.href = '/teme'))
+            .then(() => navigate('/teme'))
         )
         .catch(() => {
           alert(
             'Error validating the cookie. Click OK to be redirected to the login page'
           );
-          window.location.href = '/teme/admin';
+          navigate('/teme/admin');
         });
     }
   };

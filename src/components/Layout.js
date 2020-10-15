@@ -15,7 +15,7 @@ export default function Layout({ children }) {
 
   React.useEffect(() => {
     axios
-      .get('/api/categories')
+      .get('/api/topics')
       .then((res) => setCategories(res.data))
       .catch((err) => console.error(err.response));
   }, []);
@@ -29,8 +29,6 @@ export default function Layout({ children }) {
       setAlertState('');
     }, 2500);
   };
-
-  const updateCategories = (categories) => setCategories(categories);
 
   return (
     <>
@@ -53,7 +51,7 @@ export default function Layout({ children }) {
         />
       </Helmet>
       <AlertContext.Provider value={setAlert}>
-        <CategoriesContext.Provider value={{ categories, updateCategories }}>
+        <CategoriesContext.Provider value={{ categories, setCategories }}>
           <Navbar />
           <Alert alertMessage={alertMessage} alertState={alertState} />
           {children}
