@@ -80,11 +80,11 @@ export default function Teme() {
         <div className="blog-page__top-heading">
           <h1>Teme</h1>
           {isAuthenticated() ? (
-            <Link to="/teme/new">
+            <a href={`${process.env.GATSBY_API_URL}/teme/new`}>
               <button className="button" type="button">
                 Novi tekst
               </button>
-            </Link>
+            </a>
           ) : null}
         </div>
         <div className="topics-page__topics">

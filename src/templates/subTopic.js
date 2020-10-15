@@ -95,11 +95,13 @@ export default function SubTopic(props) {
         <section className="blog-post">
           {isAuthenticated() ? (
             <div className="blog-post__top-buttons">
-              <Link to={`/tema/${article.slug}/edit`}>
+              <a
+                href={`${process.env.GATSBY_API_URL}/tema/${article.slug}/edit`}
+              >
                 <button className="button" type="button">
                   Izmeni tekst
                 </button>
-              </Link>
+              </a>
               <button className="button" onClick={deleteArticle} type="button">
                 Obriši tekst
               </button>
