@@ -17,7 +17,7 @@ export default function Form() {
 
     if (validInputs === true) {
       axios
-        .post('/api/contact', {
+        .post(`${process.env.GATSBY_API_URL}/api/contact`, {
           name,
           email,
           message,

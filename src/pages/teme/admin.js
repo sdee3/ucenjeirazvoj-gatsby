@@ -20,7 +20,10 @@ export default function AdminLogin() {
     const currentUrl = window !== 'undefined' ? window.location.pathname : '';
 
     axios
-      .post('/api/admin-login', { username, password })
+      .post(`${process.env.GATSBY_API_URL}/api/admin-login`, {
+        username,
+        password,
+      })
       .then((res) => {
         createCookie('x-auth', res.headers['x-auth']);
         alert('Uspešna autorizacija!');

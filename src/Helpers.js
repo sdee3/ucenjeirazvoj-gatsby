@@ -31,7 +31,9 @@ const isAuthenticated = () => fetchCookie('x-auth').length > 0;
 const validateCookie = () =>
   new Promise((resolve, reject) => {
     axios
-      .post('/api/validate-cookie', { cookie: fetchCookie('x-auth') })
+      .post(`${process.env.GATSBY_API_URL}/api/validate-cookie`, {
+        cookie: fetchCookie('x-auth'),
+      })
       .then((res) => resolve(res.data))
       .catch((err) => reject(err.response));
   });

@@ -30,17 +30,17 @@ export default function Teme() {
 
   React.useEffect(() => {
     axios
-      .get('/api/topics')
+      .get(`${process.env.GATSBY_API_URL}/api/topics`)
       .then((res) => setFetchedTopics(res.data))
       .catch((err) => console.error(err.response));
 
     axios
-      .get('/api/subtopics')
+      .get(`${process.env.GATSBY_API_URL}/api/subtopics`)
       .then((res) => setFetchedSubTopics(res.data))
       .catch((err) => console.error(err.response));
 
     axios
-      .get('/api/subtopics/latest')
+      .get(`${process.env.GATSBY_API_URL}/api/subtopics/latest`)
       .then((res) => setLatestFetchedSubTopics(res.data))
       .catch((err) => console.error(err.response));
   }, []);

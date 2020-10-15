@@ -20,12 +20,12 @@ export default function Services() {
 
   React.useEffect(() => {
     axios
-      .get('/api/topics')
+      .get(`${process.env.GATSBY_API_URL}/api/topics`)
       .then((res) => setFetchedTopics(res.data))
       .catch((err) => console.error(err.response));
 
     axios
-      .get('/api/subtopics/latest')
+      .get(`${process.env.GATSBY_API_URL}/api/subtopics/latest`)
       .then((res) => setFetchedSubTopics(res.data))
       .catch((err) => console.error(err.response));
   }, []);

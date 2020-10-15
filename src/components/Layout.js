@@ -15,7 +15,7 @@ export default function Layout({ children }) {
 
   React.useEffect(() => {
     axios
-      .get('/api/topics')
+      .get(`${process.env.GATSBY_API_URL}/api/topics`)
       .then((res) => setCategories(res.data))
       .catch((err) => console.error(err.response));
   }, []);

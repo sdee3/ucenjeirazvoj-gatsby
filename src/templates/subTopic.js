@@ -19,7 +19,7 @@ export default function SubTopic(props) {
   // React.useEffect(() => {
   //   if (match.params.slug !== "new") {
   //     axios
-  //       .get(`/api/tema/${match.params.slug}`)
+  //       .get(`${process.env.GATSBY_API_URL}/api/tema/${match.params.slug}`)
   //       .then(res => {
   //         setArticle(res.data);
   //         setParentTopic(res.data.topic.name);
@@ -33,7 +33,7 @@ export default function SubTopic(props) {
       validateCookie()
         .then(() =>
           axios
-            .delete(`/api/tema/${article.slug}`)
+            .delete(`${process.env.GATSBY_API_URL}/api/tema/${article.slug}`)
             .then(() => navigate('/teme'))
         )
         .catch(() => {

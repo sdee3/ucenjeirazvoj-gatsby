@@ -34,9 +34,11 @@ export default function Topic({ topics, handleRadioChange }) {
       e.preventDefault();
       syncValues();
 
-      axios.put('/api/topics', newValues).then(() => {
-        setIsEditable(false);
-      });
+      axios
+        .put(`${process.env.GATSBY_API_URL}/api/topics`, newValues)
+        .then(() => {
+          setIsEditable(false);
+        });
     } else {
       const newValuesArray = values;
       newValuesArray[id] = e.currentTarget.innerText;
@@ -49,7 +51,7 @@ export default function Topic({ topics, handleRadioChange }) {
     e.preventDefault();
     if (newCategory.name.length) {
       axios
-        .post('/api/topics', newCategory)
+        .post(`${process.env.GATSBY_API_URL}/api/topics`, newCategory)
         .then(() => {
           setAlert('Uspešno kreiranje teme!', 'success');
           setInputVisible(false);
@@ -63,7 +65,7 @@ export default function Topic({ topics, handleRadioChange }) {
   /* const deleteCategory = (id) => {
     if (confirm('Da li sigurno želite da obrišete ovu temu?')) {
       axios
-        .delete(`/api/topics/${id}`)
+        .delete(`${process.env.GATSBY_API_URL}/api/topics/${id}`)
         .then(() => {
           setAlert('Tema uspešno izbirsana!', 'success');
         })
