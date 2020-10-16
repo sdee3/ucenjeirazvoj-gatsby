@@ -8,13 +8,13 @@ export default function About() {
         <h2>Ko smo mi?</h2>
         <p>
           Centar za učenje i razvoj je osmišljen kao edukativni centar koji
-          pruža podrška roditeljima i deci, u vidu organizovanja produženog
+          pruža podršku roditeljima i deci, u vidu organizovanja produženog
           boravka za decu školskog uzrasta, različitih edukativnih programa i
           savetodavnog i terapijskog rada.
         </p>
         <p>
           Nastojimo da budemo mesto na kom zajedno rastemo. Uživamo u radu s
-          decom i smatramo to svojim pozivom. Neprestano  tražimo nove ideje i
+          decom i smatramo to svojim pozivom. Neprestano tražimo nove ideje i
           načine komunikacije kako bismo u sigurnom i podsticajnom okruženju
           razvijali sposobnosti deteta i učenje učinili što zanimljivijim.
         </p>
