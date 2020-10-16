@@ -1,4 +1,3 @@
-/* eslint-disable no-shadow */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { Helmet } from 'react-helmet';
@@ -8,34 +7,14 @@ import { isAuthenticated, validateCookie } from '../Helpers';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 export default function SubTopic(props) {
-  const [article, setArticle] = React.useState({});
-  const [parentTopic, setParentTopic] = React.useState('');
-
-  React.useEffect(() => {
-    const { subtopic } = props.data.ucenjeirazvoj;
-
-    setArticle(subtopic);
-    setParentTopic(subtopic.topic.name);
-  }, [props]);
-
-  // React.useEffect(() => {
-  //   if (match.params.slug !== "new") {
-  //     axios
-  //       .get(`${process.env.GATSBY_API_URL}/api/tema/${match.params.slug}`)
-  //       .then(res => {
-  //         setArticle(res.data);
-  //         setParentTopic(res.data.topic.name);
-  //       })
-  //       .catch(err => console.error(err.response));
-  //   }
-  // }, []);
-
   const deleteArticle = () => {
     if (window?.confirm('Are you sure you want to delete this text?')) {
       validateCookie()
         .then(() =>
           axios
-            .delete(`${process.env.GATSBY_API_URL}/api/tema/${article.slug}`)
+            .delete(
+              `${process.env.GATSBY_API_URL}/api/tema/${props.data.ucenjeirazvoj.subtopic.slug}`
+            )
             .then(() => navigate('/teme'))
         )
         .catch(() => {
@@ -48,6 +27,7 @@ export default function SubTopic(props) {
   };
 
   const { subtopic } = props.data.ucenjeirazvoj;
+  const parentTopicName = subtopic.topic.name;
 
   return subtopic ? (
     <>
@@ -117,22 +97,22 @@ export default function SubTopic(props) {
               </button>
             </div>
           ) : null}
-          <h1 className="blog-post__title">{article.name}</h1>
+          <h1 className="blog-post__title">{subtopic.name}</h1>
           <section className="blog-post__author-category">
-            <span className="label">{parentTopic}</span>
+            <span className="label">{parentTopicName}</span>
             <span className="article-author" />
           </section>
-          {article.intro ? (
-            <section className="blog-post__intro">{article.intro}</section>
+          {subtopic.intro ? (
+            <section className="blog-post__intro">{subtopic.intro}</section>
           ) : null}
-          {article.img_url ? (
+          {subtopic.img_url ? (
             <div className="blog-post__cover-img">
-              <img alt={article.name} src={article.img_url} />
+              <img alt={subtopic.name} src={subtopic.img_url} />
             </div>
           ) : null}
           <section
             className="blog-post__text"
-            dangerouslySetInnerHTML={{ __html: article.content }}
+            dangerouslySetInnerHTML={{ __html: subtopic.content }}
           />
         </section>
       </section>

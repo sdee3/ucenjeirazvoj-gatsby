@@ -7,12 +7,17 @@ export default function AdminLogin() {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
 
+  const handleRedirect = (currentUrl) =>
+    currentUrl === '/teme/admin/'
+      ? currentUrl.replace('/admin/', '')
+      : currentUrl.replace('/admin/', '/edit');
+
   React.useEffect(() => {
     const currentUrl = window !== 'undefined' ? window.location.pathname : '';
 
     if (fetchCookie('x-auth').length) {
       alert('Već ste ulogovani! Redirekcija nazad...');
-      navigate(currentUrl.replace('/admin', ''), { replace: true });
+      navigate(handleRedirect(currentUrl), { replace: true });
     }
   }, []);
 
@@ -27,7 +32,7 @@ export default function AdminLogin() {
       .then((res) => {
         createCookie('x-auth', res.headers['x-auth']);
         alert('Uspešna autorizacija!');
-        navigate(currentUrl.replace('/admin', ''), { replace: true });
+        navigate(handleRedirect(currentUrl), { replace: true });
       })
       .catch((err) => {
         alert(err.response.data);
