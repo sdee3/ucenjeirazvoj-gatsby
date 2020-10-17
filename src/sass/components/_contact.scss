@@ -9,9 +9,9 @@
     position: absolute;
     z-index: 10;
     top: -50px;
-    left: -10%;
-    width: 120%;
+    width: calc(100vw - 16px);
     height: 90px;
+    overflow: hidden;
     transform: rotateZ(2deg);
     -o-transform: rotateZ(2deg);
     -moz-transform: rotateZ(2deg);
