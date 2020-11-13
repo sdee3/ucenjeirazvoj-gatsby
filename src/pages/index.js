@@ -50,125 +50,131 @@ export default function Home() {
         </section>
         <div className="container">
           <p>
-            Centar za učenje i razvoj je edukativni centar koji svoj program
-            ostvaruje kroz sledeće aktivnosti:
+            <span className="text__blue text__bold">
+              CENTAR ZA UČENJE I RAZVOJ
+            </span>{' '}
+            je edukativni centar koji svoj program ostvaruje kroz sledeće
+            aktivnosti:
           </p>
-          <ul>
-            <h3>
-              <li>Produženi boravak za školsku decu i program za predškolce</li>
-            </h3>
-          </ul>
-          <p>
-            U produženom boravku, u radu sa decom od I do IV razreda, koristimo
-            elemente igre, kao i elemente slobodnog i usmerenog učenja, kako bi
-            razvijali motivaciju i želju za učenjem, rastom i postignućem a
-            omogućili detetu da sa voljom i lakoćom savlada gradivo. Za učenike
-            koji pohađaju škole u našem okruženju organizujemo:
-          </p>
-          <ul>
-            <li>
-              odvođenje dece u školu i dovođenje iz škole u prostorije Centra po
-              rasporedu;
-            </li>
-            <li>
-              aktivnosti koje se odnose na izradu domaćih zadataka i
-              savladavanje tekućeg gradiva;
-            </li>
-            <li>
-              kreativne, stvaralačke, kulinarske i edukativne radionice sa
-              decom,
-            </li>
-            <li>slobodno vreme za igru i druženje;</li>
-            <li>psihološko-pedagoške radionice za decu;</li>
-            <li>dodatne aktivnosti u vidu časova engleskog jezika.</li>
-          </ul>
-          <p>
-            OŠ “Jovan Dučić” se nalazi odmah pored Centra u bloku 21 a OŠ “Laza
-            Kostić” je u blizini, sa roditeljima dece iz ostalih škola postoji
-            mogućnost dogovora.
-          </p>
-          <p>
-            Takođe, organizujemo program za decu tokom{' '}
-            <strong>letnjeg i zimskog raspusta</strong> sa edukativnim
-            sadržajima.
-          </p>
-          <p>
-            <strong>Program za predškolce</strong> realizuje se jednom nedeljno
-            u trajanju od dva sata. Rad se fokusira na razvoju različitih
-            sposobnosti potrebnih za polazak u školu sa akcentom na verbalnu
-            fluentonst, numerički faktor, perceptivni faktor, faktor memorije,
-            faktor rezonovanja, spacijalni faktor kada su u pitanju kognitivne
-            veštine ali obuhvata i različite elemente socijalne i emocionalne
-            inteligencije, takođe veoma važne na tom uzrastu. Realizuje se kroz
-            različite aktvnosti: vežbamo govor, crtamo, učimo slova kroz igru,
-            na zabavan način učimo matematiku, organizujemo radionice (osećanja,
-            odnosi sa drugima, konflikti, lepo ponašanje…
-          </p>
-          <ul>
-            <h3>
-              <li>
-                Program za rani razvoj socijalne i emocionalne inteligencije
-              </li>
-            </h3>
-          </ul>
-          <p>
-            Deca koja poseduju socijalne i emocionalne veštine lakše se
-            suočavaju sa problemima i uspešnije ih rešavaju. Veliki deo tih
-            veština se može naučiti i zbog toga je veoma važno afirmisati
-            emocionalno i socijalno vaspitanja dece, koje omogućava da odrastu u
-            emocionalno i socijalno inteligentne odrasle osobe. Mnogobrojna
-            istraživanja su pokazala da uspeh u znatno većem procentu zavisi
-            socio-emocionalne inteligencije nego od opštih intelektulanih
-            sposobnosti. Takođe, intelektualne sposobnosti su velikim delom
-            genetski determinisane a emocionalna i socijalna inteligencija se
-            razvijaju i podložnije su učenju i vaspitavanju.
-          </p>
-          <p>
-            Program se može realizvati kroz individulni rad ili u maloj grupi,
-            za decu od 5 do 12 godina. Teme koje obuhvata odnose se na: verbalnu
-            komunikaciju; neverbalnu komunikaciju; kako biti deo grupe; moja
-            osećanja; brinem o sebi, brinem o drugima; rešavanje problema;
-            slušanje-dvosmerna ulica; asertivnost.
-          </p>
-          <ul>
-            <h3>
-              <li>
-                Programi ličnog rasta i razvoja - Individualni svetodavni i
-                terapijski rad sa decom, roditeljima i odraslima
-              </li>
-            </h3>
-          </ul>
-          <p>
-            Uz pomoć savetovanja i psihoterapije možemo se osloboditi
-            emocionalnih problema, disfunkcionalnih ponašanja i iracionalnog
-            načina razmišljanja. Svrha savetodavno-terapijskog rada sa{' '}
-            <strong>odraslima</strong> je da naučimo kako da živimo kvalitetnije
-            i budemo uspešniji u obavljanju svojih uloga. Rezultat pravovremeno
-            sprovedenih psihoterapijskih intervencija je da postanemo
-            zadovoljniji, sigurniji u sebe, sposobniji za bliskost, ljubav,
-            uspešniji u učenju i obavljanju profesionalnih delatnosti.
-          </p>
-          <p>
-            Kada se <strong>dete</strong> uključi u proces psihoterapijskog
-            savetovanja, pristup u radu sa njim je kreativan i nenametljiv, uz
-            neophodno poverenje u njegove kapacitete i potencijale. Kognitivne
-            tehnike u tretmanu dece i mladih, polaze od pretpostavke da je
-            ponašanje uslovljeno načinom na koji interpretiramo situacije ili
-            događaje, odnosno načinom na koji mislimo. Tako posmatrano, reakcije
-            i ponašanja su rezultat naučenih obrazaca mišljenja. To istovremeno
-            znači da je disfunkcionalne obrasce moguće menjati, odnosno naučiti
-            nove. Stoga različitim tehnikama na strukturisan i pristupačan način
-            učimo dete da promenom sopstvenih misli menja osećanja a zatim i
-            ponašanje.
-          </p>
-          <p>
-            Savetovanje <strong>roditelja</strong> stavlja akcenat na probleme
-            vezane za vaspitanje, učenje i roditeljstvo. Cilj savetovanja je
-            unapređivanje roditeljskih veština. Savetovanje se može obavljati sa
-            jednim ili sa oba roditelja. Roditelji na ovaj način mogu razrešiti
-            dileme u vezi vaspitanja, steći znanja i uvide gde eventualno greše
-            u tom procesu.
-          </p>
+          <div className="service-category service-category__blue">
+            <img
+              alt="Produzeni boravak Novi Beograd - Ucenje i razvoj"
+              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291865/ucenjeirazvoj/vece/usluge/produzeni-boravak.jpg"
+            />
+            <ul>
+              <p className="text__blue text__bold">
+                <li>
+                  „ŠKOLICA ZA UČENJE I RAZVOJ“ - PROGRAM PRODUŽENOG BORAVKA ZA
+                  DECU ŠKOLSKOG UZRASTA
+                </li>
+              </p>
+            </ul>
+            <p>
+              Produženi boravak je otvoren za decu od I do IV razreda osnovne
+              škole. Nalazi se na Novom Beogradu, preko puta hotela Hajat, pored
+              OŠ "Jovan Dučić" i na desetak minuta udaljenosti OŠ "Laza Kostić".
+              Program rada produženog boravka svakom detetu nudi mogućnost da na
+              kvalitetan i zabavan način provede vreme, završi školske obaveze i
+              učestvuje u različitim aktivnostima koje pozitivno utiču na
+              kognitivni, emocionalni i socijalni razvoj. Ponuda produženog
+              boravka u Centru za učenje i razvoj obuhvata: rad u malim grupama
+              i individualni pristup; dovođenje dece iz škole/ odvođenje u
+              školu; pomoć u pisanju domaćih zadataka i učenju školskog
+              gradiva;kreativne i razvojne radionice (koncentracija, pamćenje,
+              tehnike učenja, motivacija, samopouzdanje, emocinalna pismenost,
+              socijalne veštine...); igranje i boravak na otvorenom; voćnu
+              užinu.
+            </p>
+            <p>
+              Nastojimo da kod naših učenika razvijamo veštine razmišljanja,
+              socijane/društvene veštine, veštine komunikacije, istraživačke i
+              veštine upravljanja sobom. Da naši programi budu vrednosno
+              orjentisani kroz izgradnju ličnih stavova u odnosu na ljude,
+              okolinu i sticanje znanja. Da kod dece podstičemo razvoj
+              zahvalnosti, posvećenosti, samopouzdanja, saradnje, kreativnosti,
+              radoznalosti, saosećajnsti, entuzijazama, integriteta, poštovanja
+              i tolerancije.
+            </p>
+          </div>
+          <div className="service-category service-category__green">
+            <img
+              className="img img__green"
+              alt="Savetovaliste za decu Novi Beograd - Ucenje i razvoj"
+              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291866/ucenjeirazvoj/vece/usluge/savetovaliste.jpg"
+            />
+            <ul>
+              <p className="text__blue text__bold">
+                <li>
+                  SAVETOVALIŠTE “CENTAR ZA RAST I RAZVOJ” – PROGRAM PODRŠKE
+                  LIČNOM RASTU I RAZVOJU DECE, RODITELJA I ODRASLIH
+                </li>
+              </p>
+            </ul>
+            <p>
+              Savetovalište svoj program se realizuje u odnosu na uzrast u
+              sledećim kategorijama:
+            </p>
+            <p>
+              Deca predškolskog i školskog uzrasta: stidljivost, nedostatak
+              samopouzdanja i samopoštovanja, prolazak kroz težak period života
+              i određena traumatska iskustva, različiti strahovi, plačljivost,
+              utučenost, slaba koncentracija, probleme u učenju, agresivno
+              ponašanje, nesigurnost, bes, neuspeh u školi, strah od škole.
+            </p>
+            <p>
+              Roditelji: pedagoška i psihološka edukacija o tome kako bolje
+              razumeti određena dečija ponašanja, zašto se javljaju i šta oni,
+              kao roditelji, mogu da urade kako bi olakšali svakodnevno
+              funkcionisanje porodice. Cilj je da roditelji osveste koji
+              postupci, od onih koje primenjuju, ne daju željene rezultate i
+              kako ih zameniti novim i efikasnijim; Kako deci postaviti granice,
+              definisati nagrade i kazne, prevazići “krizne” razvojne periode…
+            </p>
+            <p>
+              Mladi: prevazilaženje kriza odrastanja, konflikata, odnosa sa
+              drugima, partnerskih odnosa, problema u vezi; zastoja u
+              školovanju;
+            </p>
+            <p>
+              Odrasli: nezadovoljstvo, strah, strepnja, tuga, konflikti,
+              prevladavanje stresa, fobije, fluktuacije raspoloženja, partnerski
+              izazovi, nefunkcionalna uverenja, partnerski izazovi..
+            </p>
+            <p>
+              Rad u savetovalištu baziran je na konceptima psihoterapijskog
+              pravca transakciona analiza. U osnovi transakcione analize je
+              teorija ličnosti zasnovana na pručavanju ego stanja i analizi
+              transakcija, kao osnovnih jedinica komunikacije. Kao pomoćna
+              sredsva u radu koristimo tehnike kognitivnog i bihejvioralnog
+              savetovanja i terapije igrom.
+            </p>
+          </div>
+          <div className="service-category service-category__yellow">
+            <img
+              alt="Program za rani podrska-licnom-rastu-i-razvoju Novi Beograd - Ucenje i razvoj"
+              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291866/ucenjeirazvoj/vece/usluge/program-rani-razvoj.jpg"
+            />
+            <ul>
+              <p className="text__blue text__bold">
+                <li>
+                  "CENTAR ZA RAZVOJ ŽIVOTNIH VEŠTINA" – PROGRAM ZA RANI RAZVOJ
+                  SOCIJALNE I EMOCIONALNE INTELIGENCIJE I KOGNITIVNIH VEŠTINA
+                </li>
+              </p>
+            </ul>
+            <p>
+              U okviru ovog programa organizujemo radionice za decu uzrasta od 4
+              do 12 godina. Radionice obuhvataju različite teme vezane za
+              kognitivni, socijalni i emocionalni aspekt dečijeg razvoja.
+              Osmišljene su tako da odgovore na različite potrebe savremene
+              porodice i da omoguće deci da kvalitetno provedu vreme u
+              vršnjačkom okruženju razvijajući različite veštine. U ponudi imamo
+              radionice pripreme za polazak u školu za predškolce, radionice za
+              razvoj socijalne i emocionalne inteligencije i samopoštovanja,
+              radionice za razvoj pažnje i koncentracije, razičitih tehnika
+              učenja, asertivnosti, kreativnih potencijala…
+            </p>
+          </div>
         </div>
         <Services />
       </section>

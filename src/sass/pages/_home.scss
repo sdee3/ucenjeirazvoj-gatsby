@@ -16,6 +16,45 @@
     }
   }
 
+  .text {
+    &__blue {
+      color: $blue;
+    }
+
+    &__bold {
+      font-weight: 600;
+    }
+  }
+
+  .service-category {
+    border: 2px solid;
+    border-radius: 2px;
+    margin-top: 2rem;
+
+    p {
+      padding: 0 1.5rem;
+    }
+
+    &__blue {
+      border-color: $blue;
+    }
+
+    &__green {
+      border-color: $green;
+    }
+
+    &__yellow {
+      border-color: darken($yellow, 20);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+
   &__about-us {
     margin-top: 3rem;
     margin-bottom: 3rem;
