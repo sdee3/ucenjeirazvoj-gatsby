@@ -37,20 +37,27 @@ export default function Support() {
       <section className="support-page">
         <div className="container">
           <h1>Usluge</h1>
-          <ul>
-            <li>
-              <Link to="/usluge/produzeni-boravak">Produženi boravak</Link>
-            </li>
-            <li>
-              <Link to="/usluge/radionice-za-decu">Radionice za decu</Link>
-            </li>
-            <li>
-              <Link to="/usluge/podrska-licnom-rastu-i-razvoju">
-                Podrška ličnom rastu i razvoju - Individualni savetodavni i
-                terapijski rad sa decom, roditeljima i odraslima
-              </Link>
-            </li>
-          </ul>
+          <Link to="/usluge/produzeni-boravak">
+            <img
+              className="img img__blue"
+              alt="Produzeni boravak Novi Beograd - Ucenje i razvoj"
+              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291865/ucenjeirazvoj/vece/usluge/produzeni-boravak.jpg"
+            />
+          </Link>
+          <Link to="/usluge/radionice-za-decu">
+            <img
+              className="img img__green"
+              alt="Savetovaliste za decu Novi Beograd - Ucenje i razvoj"
+              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291866/ucenjeirazvoj/vece/usluge/savetovaliste.jpg"
+            />
+          </Link>
+          <Link to="/usluge/podrska-licnom-rastu-i-razvoju">
+            <img
+              className="img img__yellow"
+              alt="Program za rani podrska-licnom-rastu-i-razvoju Novi Beograd - Ucenje i razvoj"
+              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291866/ucenjeirazvoj/vece/usluge/program-rani-razvoj.jpg"
+            />
+          </Link>
         </div>
       </section>
     </>

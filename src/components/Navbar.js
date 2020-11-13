@@ -21,7 +21,7 @@ function Navbar() {
           <Link to="/">
             <div className="navbar__brand--image">
               <img
-                src="https://res.cloudinary.com/sdee3-com/image/upload/c_scale,w_250/v1591338251/ucenjeirazvoj/ucenje-i-razvoj-logo-large.png"
+                src="https://res.cloudinary.com/sdee3-com/image/upload/c_scale,w_250/v1605292517/ucenjeirazvoj/ur-logo-large-new.png"
                 alt="Ucenje i razvoj logo"
               />
             </div>
