@@ -46,16 +46,16 @@ export default function Support() {
           </Link>
           <Link to="/usluge/radionice-za-decu">
             <img
-              className="img img__green"
-              alt="Savetovaliste za decu Novi Beograd - Ucenje i razvoj"
-              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291866/ucenjeirazvoj/vece/usluge/savetovaliste.jpg"
+              className="img img__yellow"
+              alt="Program za rani podrska-licnom-rastu-i-razvoju Novi Beograd - Ucenje i razvoj"
+              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291866/ucenjeirazvoj/vece/usluge/program-rani-razvoj.jpg"
             />
           </Link>
           <Link to="/usluge/podrska-licnom-rastu-i-razvoju">
             <img
-              className="img img__yellow"
-              alt="Program za rani podrska-licnom-rastu-i-razvoju Novi Beograd - Ucenje i razvoj"
-              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291866/ucenjeirazvoj/vece/usluge/program-rani-razvoj.jpg"
+              className="img img__green"
+              alt="Savetovaliste za decu Novi Beograd - Ucenje i razvoj"
+              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291866/ucenjeirazvoj/vece/usluge/savetovaliste.jpg"
             />
           </Link>
         </div>
