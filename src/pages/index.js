@@ -85,16 +85,24 @@ export default function Home() {
               socijalne veštine...); igranje i boravak na otvorenom; voćnu
               užinu.
             </p>
-            <p>
-              Nastojimo da kod naših učenika razvijamo veštine razmišljanja,
-              socijane/društvene veštine, veštine komunikacije, istraživačke i
-              veštine upravljanja sobom. Da naši programi budu vrednosno
-              orjentisani kroz izgradnju ličnih stavova u odnosu na ljude,
-              okolinu i sticanje znanja. Da kod dece podstičemo razvoj
-              zahvalnosti, posvećenosti, samopouzdanja, saradnje, kreativnosti,
-              radoznalosti, saosećajnsti, entuzijazama, integriteta, poštovanja
-              i tolerancije.
-            </p>
+            <p>Nastojimo da:</p>
+            <ul>
+              <li>
+                kod naših učenika razvijamo veštine razmišljanja,
+                socijane/društvene veštine, veštine komunikacije, istraživačke i
+                veštine upravljanja sobom
+              </li>
+              <li>
+                naši programi budu vrednosno orjentisani kroz izgradnju ličnih
+                stavova u odnosu na ljude, okolinu i sticanje znanja
+              </li>
+              <li>
+                kod dece podstičemo razvoj zahvalnosti, posvećenosti,
+                samopouzdanja, saradnje, kreativnosti, radoznalosti,
+                saosećajnsti, entuzijazama, integriteta, poštovanja i
+                tolerancije
+              </li>
+            </ul>
           </div>
           <div className="service-category service-category__green">
             <img
@@ -122,23 +130,25 @@ export default function Home() {
               ponašanje, nesigurnost, bes, neuspeh u školi, strah od škole.
             </p>
             <p>
-              Roditelji: pedagoška i psihološka edukacija o tome kako bolje
-              razumeti određena dečija ponašanja, zašto se javljaju i šta oni,
-              kao roditelji, mogu da urade kako bi olakšali svakodnevno
+              <span className="text__blue text__bold">Roditelji:</span>{' '}
+              pedagoška i psihološka edukacija o tome kako bolje razumeti
+              određena dečija ponašanja, zašto se javljaju i šta oni, kao
+              roditelji, mogu da urade kako bi olakšali svakodnevno
               funkcionisanje porodice. Cilj je da roditelji osveste koji
               postupci, od onih koje primenjuju, ne daju željene rezultate i
               kako ih zameniti novim i efikasnijim; Kako deci postaviti granice,
               definisati nagrade i kazne, prevazići “krizne” razvojne periode…
             </p>
             <p>
-              Mladi: prevazilaženje kriza odrastanja, konflikata, odnosa sa
-              drugima, partnerskih odnosa, problema u vezi; zastoja u
-              školovanju;
+              <span className="text__blue text__bold">Mladi:</span>{' '}
+              prevazilaženje kriza odrastanja, konflikata, odnosa sa drugima,
+              partnerskih odnosa, problema u vezi; zastoja u školovanju;
             </p>
             <p>
-              Odrasli: nezadovoljstvo, strah, strepnja, tuga, konflikti,
-              prevladavanje stresa, fobije, fluktuacije raspoloženja, partnerski
-              izazovi, nefunkcionalna uverenja, partnerski izazovi..
+              <span className="text__blue text__bold">Odrasli:</span>{' '}
+              nezadovoljstvo, strah, strepnja, tuga, konflikti, prevladavanje
+              stresa, fobije, fluktuacije raspoloženja, partnerski izazovi,
+              nefunkcionalna uverenja, partnerski izazovi..
             </p>
             <p>
               Rad u savetovalištu baziran je na konceptima psihoterapijskog
