@@ -40,8 +40,12 @@
       text-decoration: none;
     }
 
-    img {
-      height: 125px;
+    &--image {
+      margin: 0 auto;
+
+      img {
+        height: 125px;
+      }
     }
 
     p {

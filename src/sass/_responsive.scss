@@ -167,6 +167,12 @@
 
   .support-page {
     background-position: 20% 40%;
+
+    div {
+      .img {
+        max-width: unset;
+      }
+    }
   }
 
   .topics-page {

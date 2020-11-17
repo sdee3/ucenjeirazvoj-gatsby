@@ -38,25 +38,31 @@ export default function Support() {
         <div className="container">
           <h1>Usluge</h1>
           <Link to="/usluge/produzeni-boravak">
-            <img
-              className="img img__blue"
-              alt="Produzeni boravak Novi Beograd - Ucenje i razvoj"
-              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291865/ucenjeirazvoj/vece/usluge/produzeni-boravak.jpg"
-            />
+            <div>
+              <img
+                className="img img__blue"
+                alt="Produzeni boravak Novi Beograd - Ucenje i razvoj"
+                src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291865/ucenjeirazvoj/vece/usluge/produzeni-boravak.jpg"
+              />
+            </div>
           </Link>
           <Link to="/usluge/radionice-za-decu">
-            <img
-              className="img img__yellow"
-              alt="Program za rani podrska-licnom-rastu-i-razvoju Novi Beograd - Ucenje i razvoj"
-              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291866/ucenjeirazvoj/vece/usluge/program-rani-razvoj.jpg"
-            />
+            <div>
+              <img
+                className="img img__yellow"
+                alt="Program za rani podrska-licnom-rastu-i-razvoju Novi Beograd - Ucenje i razvoj"
+                src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291866/ucenjeirazvoj/vece/usluge/program-rani-razvoj.jpg"
+              />
+            </div>
           </Link>
           <Link to="/usluge/podrska-licnom-rastu-i-razvoju">
-            <img
-              className="img img__green"
-              alt="Savetovaliste za decu Novi Beograd - Ucenje i razvoj"
-              src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291866/ucenjeirazvoj/vece/usluge/savetovaliste.jpg"
-            />
+            <div>
+              <img
+                className="img img__green"
+                alt="Savetovaliste za decu Novi Beograd - Ucenje i razvoj"
+                src="https://res.cloudinary.com/sdee3-com/image/upload/v1605291866/ucenjeirazvoj/vece/usluge/savetovaliste.jpg"
+              />
+            </div>
           </Link>
         </div>
       </section>
