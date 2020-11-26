@@ -38,7 +38,7 @@ export default function Support() {
         <div className="container">
           <h1>Usluge</h1>
           <Link to="/usluge/produzeni-boravak">
-            <div>
+            <div className="text-center">
               <img
                 className="img img__blue"
                 alt="Produzeni boravak Novi Beograd - Ucenje i razvoj"
@@ -47,7 +47,7 @@ export default function Support() {
             </div>
           </Link>
           <Link to="/usluge/radionice-za-decu">
-            <div>
+            <div className="text-center">
               <img
                 className="img img__yellow"
                 alt="Program za rani podrska-licnom-rastu-i-razvoju Novi Beograd - Ucenje i razvoj"
@@ -56,7 +56,7 @@ export default function Support() {
             </div>
           </Link>
           <Link to="/usluge/podrska-licnom-rastu-i-razvoju">
-            <div>
+            <div className="text-center">
               <img
                 className="img img__green"
                 alt="Savetovaliste za decu Novi Beograd - Ucenje i razvoj"
